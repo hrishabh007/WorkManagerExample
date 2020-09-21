@@ -31,9 +31,9 @@ public class MainActivity extends AppCompatActivity {
         Data data = new Data.Builder().putInt(KEY_COUNT_VALUE, 1750)
                 .build();
 
-      //  Constraints constraints = new Constraints.Builder().setRequiresCharging(true).build();
+        Constraints constraints = new Constraints.Builder().setRequiresCharging(true).build();
         final OneTimeWorkRequest oneTimeWorkRequest = new OneTimeWorkRequest.Builder(DemoWorker.class)
-           //     .setConstraints(constraints)
+                .setConstraints(constraints)
                 .setInputData(data)
                 .build();
         final TextView textView = (TextView) findViewById(R.id.txtview);
